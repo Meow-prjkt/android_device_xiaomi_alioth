@@ -27,6 +27,16 @@ BYPASS_CHARGE_SUPPORTED := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 USE_PIXEL_CHARGING := true
 
+# Lunaris
+WITH_BCR := true
+WITH_GMS := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lunaris.maintainer=Yaseakun
+
+TARGET_SUPPORTED_REFRESH_RATES := 60,120
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_alioth
 PRODUCT_DEVICE := alioth
