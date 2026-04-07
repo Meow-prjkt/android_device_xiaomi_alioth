@@ -21,6 +21,32 @@ TARGET_INCLUDES_MIUI_CAMERA := true
 # Enable UI enhancements
 TARGET_ENABLE_BLUR := true
 
+# Axion features
+AXION_CAMERA_REAR_INFO := 48,8,5
+AXION_CAMERA_FRONT_INFO := 20
+TARGET_SUPPORTED_REFRESH_RATES := 60,120
+
+# CPU
+AXION_PROCESSOR := Snapdragon_870_5G
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := schedutil
+
+# GPU
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/freq_table_mhz
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/min_clock_mhz
+
+# Flashlight strength
+TORCH_STR_SUPPORTED := true
+
+# AxionFx
+TARGET_INCLUDE_AXFX := true
+
+# Maintainer
+AXION_MAINTAINER := Yaseakun
+
+# BCR
+TARGET_PREBUILT_BCR := true
+
 # Enable features
 TARGET_SUPPORTS_QUICK_TAP := true
 BYPASS_CHARGE_SUPPORTED := true
